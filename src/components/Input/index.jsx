@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+import axios from "axios";
+
 import styles from "../Input/input.module.scss";
 
 const index = ({ posts, setPosts }) => {
@@ -13,10 +15,17 @@ const index = ({ posts, setPosts }) => {
       title,
       body,
     };
-    console.log(newPost);
     setPosts([...posts, newPost]);
     setTitle("");
     setBody("");
+    try {
+      axios.post(
+        "https://63cb9e105c6f2e1d84b8d12b.mockapi.io/favorites/",
+        newPost
+      );
+    } catch (error) {
+      console.log("Помилка при відправці", error);
+    }
   };
 
   return (
