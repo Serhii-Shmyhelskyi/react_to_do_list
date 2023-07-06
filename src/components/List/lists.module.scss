@@ -1,0 +1,20 @@
+.root {
+  border: 1px solid teal;
+  margin-bottom: 10px;
+  border-radius: 20px;
+  width: 860px;
+  height: 100%;
+  .listWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .listText {
+      margin: 10px;
+      width: 600px;
+      overflow: hidden;
+    }
+    .listBtn {
+      margin: 10px;
+    }
+  }
+}
