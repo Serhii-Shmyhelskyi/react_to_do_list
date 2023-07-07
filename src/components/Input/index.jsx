@@ -8,7 +8,7 @@ const index = ({ posts, setPosts }) => {
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
 
-  const addNevPost = () => {
+  const addNevPost = async () => {
     // e.preventDefault();
     const newPost = {
       // якщо локально
@@ -20,7 +20,10 @@ const index = ({ posts, setPosts }) => {
     setTitle("");
     setBody("");
     try {
-      axios.post("https://64a6cb22096b3f0fcc809b30.mockapi.io/posts/", newPost);
+      await axios.post(
+        "https://64a6cb22096b3f0fcc809b30.mockapi.io/posts/",
+        newPost
+      );
     } catch (error) {
       console.log("Помилка при відправці", error);
     }
