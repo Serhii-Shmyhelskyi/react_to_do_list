@@ -25,7 +25,7 @@ const index = () => {
   const removePost = async (post) => {
     setPosts(posts.filter((p) => p.id !== post.id));
     try {
-      await axios.delete(
+      axios.delete(
         `https://64a6cb22096b3f0fcc809b30.mockapi.io/posts/${post.id}`
       );
     } catch (error) {

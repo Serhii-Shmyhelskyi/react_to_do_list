@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import axios from "axios";
 
@@ -8,8 +8,8 @@ const index = ({ posts, setPosts }) => {
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
 
-  const addNevPost = async () => {
-    // e.preventDefault();
+  const addNevPost = (e) => {
+    e.preventDefault();
     const newPost = {
       // якщо локально
       // id: Date.now(),
@@ -17,13 +17,15 @@ const index = ({ posts, setPosts }) => {
       body,
     };
     setPosts([...posts, newPost]);
+
+    setTimeout(function () {
+      location.reload();
+    }, 500);
+
     setTitle("");
     setBody("");
     try {
-      await axios.post(
-        "https://64a6cb22096b3f0fcc809b30.mockapi.io/posts/",
-        newPost
-      );
+      axios.post("https://64a6cb22096b3f0fcc809b30.mockapi.io/posts/", newPost);
     } catch (error) {
       console.log("Помилка при відправці", error);
     }
