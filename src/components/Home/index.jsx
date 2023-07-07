@@ -12,7 +12,7 @@ const index = () => {
     async function onItems() {
       try {
         const { data } = await axios.get(
-          "https://63cb9e105c6f2e1d84b8d12b.mockapi.io/favorites/"
+          "https://64a6cb22096b3f0fcc809b30.mockapi.io/posts/"
         );
         setPosts(data);
       } catch (error) {
@@ -22,11 +22,11 @@ const index = () => {
     onItems();
   }, []);
 
-  const removePost = (post) => {
+  const removePost = async (post) => {
     setPosts(posts.filter((p) => p.id !== post.id));
     try {
-      axios.delete(
-        `https://63cb9e105c6f2e1d84b8d12b.mockapi.io/favorites/${post.id}`
+      await axios.delete(
+        `https://64a6cb22096b3f0fcc809b30.mockapi.io/posts/${post.id}`
       );
     } catch (error) {
       console.log("Помилка при видалені", error);

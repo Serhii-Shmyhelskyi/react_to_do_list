@@ -8,10 +8,11 @@ const index = ({ posts, setPosts }) => {
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
 
-  const addNevPost = (e) => {
-    e.preventDefault();
+  const addNevPost = () => {
+    // e.preventDefault();
     const newPost = {
-      id: Date.now(),
+      // якщо локально
+      // id: Date.now(),
       title,
       body,
     };
@@ -19,10 +20,7 @@ const index = ({ posts, setPosts }) => {
     setTitle("");
     setBody("");
     try {
-      axios.post(
-        "https://63cb9e105c6f2e1d84b8d12b.mockapi.io/favorites/",
-        newPost
-      );
+      axios.post("https://64a6cb22096b3f0fcc809b30.mockapi.io/posts/", newPost);
     } catch (error) {
       console.log("Помилка при відправці", error);
     }

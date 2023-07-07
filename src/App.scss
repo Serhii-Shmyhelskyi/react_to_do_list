@@ -425,7 +425,7 @@ template {
 
 .wrapper {
   margin: 20px auto;
-  max-width: 900px;
+  max-width: 800px;
 }
 
 button {
@@ -436,6 +436,21 @@ button {
   background-color: rgba(218, 207, 194, 0.655);
   cursor: pointer;
   &:hover {
+    background-color: rgba(110, 248, 110, 0.834);
+  }
+  &:active {
     background-color: rgba(16, 202, 16, 0.834);
+  }
+}
+
+@media (max-width: 500px) {
+  button {
+    cursor: pointer;
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.834);
+    }
+    &:active {
+      background-color: rgba(255, 255, 255, 0.834);
+    }
   }
 }
