@@ -1,8 +1,8 @@
 .root {
-  border: 1px solid teal;
+  border: 4px solid #f38c8c;
   margin: 10px;
   border-radius: 20px;
-  // width: 100%;
+  background-color: #fffacd;
   height: 100%;
   .listWrapper {
     display: flex;
@@ -15,6 +15,22 @@
     }
     .listBtn {
       margin: 10px;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .root {
+    .listWrapper {
+      display: block;
+      .listText {
+        width: 100%;
+        margin: 0;
+        padding: 5px;
+      }
+      .listBtn {
+        margin: 10px;
+      }
     }
   }
 }

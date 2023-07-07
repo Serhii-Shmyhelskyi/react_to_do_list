@@ -17,13 +17,14 @@ const index = ({ posts, setPosts }) => {
       body,
     };
     setPosts([...posts, newPost]);
-
+    // оновлення сайту чере 0,5 с, після добавлянная поста
     setTimeout(function () {
       location.reload();
     }, 500);
-
+    // очистка  useState
     setTitle("");
     setBody("");
+
     try {
       axios.post("https://64a6cb22096b3f0fcc809b30.mockapi.io/posts/", newPost);
     } catch (error) {
