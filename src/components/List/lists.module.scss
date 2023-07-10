@@ -15,6 +15,14 @@
     }
     .listBtn {
       margin: 10px;
+      img {
+        cursor: pointer;
+        width: 50px;
+        transition: scale 0.2s ease-in-out;
+        &:hover {
+          scale: 1.1;
+        }
+      }
     }
   }
 }
@@ -22,7 +30,7 @@
 @media (max-width: 500px) {
   .root {
     .listWrapper {
-      display: block;
+      display: flex;
       .listText {
         width: 100%;
         margin: 0;
@@ -30,6 +38,9 @@
       }
       .listBtn {
         margin: 10px;
+        img {
+          width: 40px;
+        }
       }
     }
   }

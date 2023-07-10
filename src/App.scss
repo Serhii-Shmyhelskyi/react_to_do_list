@@ -429,29 +429,32 @@ template {
   max-width: 800px;
 }
 
-button {
-  margin: 10px 0;
-  padding: 10px;
-  border-radius: 20px;
-  width: 170px;
-  background-color: rgba(218, 207, 194, 0.655);
-  cursor: pointer;
-  &:hover {
-    background-color: rgba(110, 248, 110, 0.834);
-  }
-  &:active {
-    background-color: rgba(16, 202, 16, 0.834);
-  }
-}
+// button {
+//   margin: 10px 0;
+//   padding: 10px;
+//   border-radius: 20px;
+//   width: 175px;
+//   height: 40px;
+//   background-color: rgba(218, 207, 194, 0.655);
+//   cursor: pointer;
+//   &:hover {
+//     background-color: rgba(110, 248, 110, 0.834);
+//     border: 1px solid rgba(18, 222, 18, 0.834);
+//   }
+//   &:active {
+//     background-color: rgba(16, 202, 16, 0.834);
+//   }
+// }
 
-@media (max-width: 500px) {
-  button {
-    cursor: pointer;
-    &:hover {
-      background-color: rgba(218, 207, 194, 0.655);
-    }
-    &:active {
-      background-color: rgba(218, 207, 194, 0.655);
-    }
-  }
-}
+// @media (max-width: 500px) {
+//   button {
+//     cursor: pointer;
+//     &:hover {
+//       background-color: rgba(218, 207, 194, 0.655);
+//       border: 1px solid rgba(218, 207, 194, 0.655);
+//     }
+//     &:active {
+//       background-color: rgba(218, 207, 194, 0.655);
+//     }
+//   }
+// }

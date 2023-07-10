@@ -48,7 +48,10 @@ const index = ({ posts, setPosts }) => {
           placeholder="Текст"
         />
         <div className={styles.myInputBtn}>
-          <button onClick={addNevPost}>Створити нотатку</button>
+          <img
+            src="https://img.icons8.com/?size=512&id=110229&format=png"
+            alt="plus"
+            onClick={addNevPost}></img>
         </div>
         {posts.length == 0 ? <h2>Створіть нотатку</h2> : <h2>Нотатки:</h2>}
       </form>
