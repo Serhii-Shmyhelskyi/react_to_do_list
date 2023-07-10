@@ -2,13 +2,19 @@
   margin: 10px;
   .myInput {
     text-align: center;
-    img {
+    .myInputBtnNoDisable {
       cursor: pointer;
       width: 90px;
-      transition: scale 0.2s ease-in-out;
+      transition: all 0.3s ease-in-out;
       &:hover {
         scale: 1.1;
       }
+    }
+    .myInputBtnDisable {
+      transition: all 0.3s ease-in-out;
+      cursor: not-allowed;
+      filter: opacity(40%);
+      width: 90px;
     }
     input {
       width: 100%;
